@@ -32,9 +32,31 @@ public class Exercises {
 	}
 
 	public int difference(ArrayList<Integer> numbers) {
-		// write your code here
+		if (numbers == null || numbers.length < 1) {
+			return -1;
+		}
 
-		return -1;		// default return value to ensure compilation
+		int min = 0;
+		int max = 0;
+
+		for (int i = 0; i < numbers.length; i++) {
+			if (i == 0) {
+				min = numbers[i];
+				max = numbers[i];
+			}
+
+			if (max < numbers[i]) {
+				max = numbers[i];
+			}
+
+			if (min > numbers[i]) {
+				min = numbers[i];
+			}
+		}
+
+		int differnce = max-min;
+
+		return differnce;
 	}
 
 	public double biggest(ArrayList<Double> numbers) {
