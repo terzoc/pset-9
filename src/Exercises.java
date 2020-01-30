@@ -81,18 +81,21 @@ public class Exercises {
 	}
 
 	public ArrayList<String> middle(ArrayList<String> values) {
-		if (values == null || values.length < 3 || values.length % 2 == 0) {
-			return new String[0];
+		if (values == null || values.size() < 3 || values.size() % 2 == 0) {
+			return new ArrayList<String>();
 		}
 
-		for (int i = 0; i < values.length; i++) {
-			if (values[i] == null) {
-				return new String[0];
+		for (int i = 0; i < values.size(); i++) {
+			if (values.get(i) == null) {
+				return new ArrayList<String>();
 			}
 		}
 
-		int middle = (int)(Math.ceil(values.length / 2));
-		String[] middles = {values[middle - 1], values[middle], values[middle + 1]};
+		int middle = (int)(Math.ceil(values.size() / 2));
+		ArrayList<String> middles = new ArrayList<String>();
+		middles.add(values.get(middle-1));
+		middles.add(values.get(middle));
+		middles.add(values.get(middle+1));
 
 		return middles;
 	}
