@@ -60,20 +60,20 @@ public class Exercises {
 	}
 
 	public double biggest(ArrayList<Double> numbers) {
-		if (numbers == null || numbers.length < 3 || numbers.length % 2 == 0) {
+		if (numbers == null || numbers.size() < 3 || numbers.size() % 2 == 0) {
 			return -1;
 		}
 
-		int middle = (int)(Math.ceil(numbers.length / 2));
+		int middle = (int)(Math.ceil(numbers.size() / 2));
 		double max = -1;
 
-		for (int i = 0; i < numbers.length; i++) {
-			if (numbers[i] < 0) {
+		for (int i = 0; i < numbers.size(); i++) {
+			if (numbers.get(i) < 0) {
 					return -1;
 				}
 
-				if ((i == 0 || i == numbers.length - 1 || i == middle) && numbers[i] > max) {
-					max = numbers[i];
+				if ((i == 0 || i == numbers.size() - 1 || i == middle) && numbers.get(i) > max) {
+					max = numbers.get(i);
 				}
 			}
 
