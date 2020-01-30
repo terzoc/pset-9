@@ -15,19 +15,17 @@ public class Exercises {
 	}
 
 	public ArrayList<String> endsMeet(ArrayList<String> values, int n) {
-		if (values == null || values.length < n || n <= 0) {
-			return new String[0];
+		if (values == null || values.size() < n || n <= 0) {
+			return new ArrayList<String>();
 		}
 
-		String[] combined = new String[n * 2];
+		ArrayList<String> combined = new ArrayList<String>();
 		for (int i = 0; i < n; i++) {
-			combined[i] = values[i];
+			combined.add(values.get(i));
 		}
 
-		int j = n;
-		for (int i = values.length - n; i < values.length; i++) {
-			combined[j] = values[i];
-			j++;
+		for (int i = values.size() - n; i < values.size(); i++) {
+			combined.add(values.get(i));
 		}
 
 		return combined;
