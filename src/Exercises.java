@@ -32,25 +32,25 @@ public class Exercises {
 	}
 
 	public int difference(ArrayList<Integer> numbers) {
-		if (numbers == null || numbers.length < 1) {
+		if (numbers == null || numbers.size() < 1) {
 			return -1;
 		}
 
 		int min = 0;
 		int max = 0;
 
-		for (int i = 0; i < numbers.length; i++) {
+		for (int i = 0; i < numbers.size(); i++) {
 			if (i == 0) {
-				min = numbers[i];
-				max = numbers[i];
+				min = numbers.get(i);
+				max = numbers.get(i);
 			}
 
-			if (max < numbers[i]) {
-				max = numbers[i];
+			if (max < numbers.get(i)) {
+				max = numbers.get(i);
 			}
 
-			if (min > numbers[i]) {
-				min = numbers[i];
+			if (min > numbers.get(i)) {
+				min = numbers.get(i);
 			}
 		}
 
