@@ -11,7 +11,7 @@ public class Exercises {
 			return true;
 		}
 
-		return false;	// default return value to ensure compilation
+		return false;
 	}
 
 	public ArrayList<String> endsMeet(ArrayList<String> values, int n) {
