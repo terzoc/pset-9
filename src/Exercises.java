@@ -81,9 +81,20 @@ public class Exercises {
 	}
 
 	public ArrayList<String> middle(ArrayList<String> values) {
-		// write your code here
+		if (values == null || values.length < 3 || values.length % 2 == 0) {
+			return new String[0];
+		}
 
-		return null;	// default return value to ensure compilation
+		for (int i = 0; i < values.length; i++) {
+			if (values[i] == null) {
+				return new String[0];
+			}
+		}
+
+		int middle = (int)(Math.ceil(values.length / 2));
+		String[] middles = {values[middle - 1], values[middle], values[middle + 1]};
+
+		return middles;
 	}
 
 	public boolean increasing(ArrayList<Integer> numbers) {
