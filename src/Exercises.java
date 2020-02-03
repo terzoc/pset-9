@@ -188,8 +188,8 @@ public class Exercises {
 			return -1;
 		}
 
-		for (int i = 0; i < values.length; i++) {
-			if (values[i] == null) {
+		for (int i = 0; i < values.size(); i++) {
+			if (values.get(i) == null) {
 				return -1;
 			}
 		}
@@ -199,8 +199,8 @@ public class Exercises {
 		String last = "";
 		int clumps = 0;
 
-		for (int i = 0; i < values.length; i++) {
-			if (last.equals(values[i])) {
+		for (int i = 0; i < values.size(); i++) {
+			if (last.equals(values.get(i))) {
 				same = true;
 				if (lastSame != true) {
 					clumps++;
@@ -208,7 +208,7 @@ public class Exercises {
 			} else {
 				same = false;
 			}
-			last = values[i];
+			last = values.get(i);
 			lastSame = same;
 		}
 
