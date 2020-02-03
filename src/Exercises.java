@@ -115,15 +115,15 @@ public class Exercises {
 		}
 
 	public boolean everywhere(ArrayList<Integer> numbers, int x) {
-		if (numbers == null || numbers.length < 1) {
+		if (numbers == null || numbers.size() < 1) {
 			return false;
 		}
 
 		boolean lastPlace = false;
 		int gap = 0;
 
-		for (int i = 0; i < numbers.length; i++) {
-			if (numbers[i] == x) {
+		for (int i = 0; i < numbers.size(); i++) {
+			if (numbers.get(i) == x) {
 				lastPlace = true;
 				gap = 0;
 			} else {
