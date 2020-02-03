@@ -144,14 +144,14 @@ public class Exercises {
 	}
 
 	public boolean consecutive(ArrayList<Integer> numbers) {
-		if (numbers == null || numbers.length < 3) {
+		if (numbers == null || numbers.size() < 3) {
 			return false;
 		}
 
-		for (int i = 1; i < numbers.length-1; i++) {
-			if (numbers[i-1] % 2 == 0 && numbers[i] % 2 == 0 && numbers[i+1] % 2 == 0) {
+		for (int i = 1; i < numbers.size()-1; i++) {
+			if (numbers.get(i-1) % 2 == 0 && numbers.get(i) % 2 == 0 && numbers.get(i+1) % 2 == 0) {
 				return true;
-			}else if (numbers[i-1] % 2 == 1 && numbers[i] % 2 == 1 && numbers[i+1] % 2 == 1) {
+			}else if (numbers.get(i-1) % 2 == 1 && numbers.get(i) % 2 == 1 && numbers.get(i+1) % 2 == 1) {
 				return true;
 			}
 		}
