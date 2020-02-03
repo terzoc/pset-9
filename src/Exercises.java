@@ -144,9 +144,19 @@ public class Exercises {
 	}
 
 	public boolean consecutive(ArrayList<Integer> numbers) {
-		// write your code here
+		if (numbers == null || numbers.length < 3) {
+			return false;
+		}
 
-		return false;	// default return value to ensure compilation
+		for (int i = 1; i < numbers.length-1; i++) {
+			if (numbers[i-1] % 2 == 0 && numbers[i] % 2 == 0 && numbers[i+1] % 2 == 0) {
+				return true;
+			}else if (numbers[i-1] % 2 == 1 && numbers[i] % 2 == 1 && numbers[i+1] % 2 == 1) {
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	public boolean balance(ArrayList<Integer> numbers) {
